@@ -21,7 +21,7 @@ const Contact = () => {
     setIsLoading(true);
     setCurrentAnimation("hit");
 
-    fetch("https://threed-portfolio-wft1.onrender.com/send-email", {
+    fetch(`${import.meta.env.VITE_APP_API_BASE_URL}/send-email`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
