@@ -1,5 +1,4 @@
 import { Suspense, useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
 import { Canvas } from "@react-three/fiber";
 import Fox from "../models/Fox";
 import Loader from "../components/Loader";
@@ -22,7 +21,7 @@ const Contact = () => {
     setIsLoading(true);
     setCurrentAnimation("hit");
 
-    fetch("http://localhost:8080/send-email", {
+    fetch("https://threed-portfolio-wft1.onrender.com/send-email", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

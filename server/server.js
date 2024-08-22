@@ -5,7 +5,7 @@ require("dotenv").config();
 
 const app = express();
 
-app.use(cors());
+app.use(cors({ origin: "https://to6ko.com" }));
 app.use(express.json());
 
 app.post("/send-email", (req, res) => {
